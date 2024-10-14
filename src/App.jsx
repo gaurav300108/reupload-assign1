@@ -9,8 +9,9 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signin" element={<SignIn />} />
         {/* Redirect to sign in if no route matches */}
-          <Route path="/dashboard" element={<Navigate to="/dashboard" />} />
-        <Route path="/signin" element={<Navigate to="/signin" />} />
+             <Route path="/" element={<Navigate to="/signin" />} />
+          <Route path="*" element={<Navigate to="/dashboard" />} />
+
       
         
       </Routes>
