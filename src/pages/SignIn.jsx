@@ -107,7 +107,7 @@ const SignInPage = () => {
 
 
                     <p className="text-center mt-4 text-sm text-gray-600">
-                        Don't have an account? <a href="#" className="text-blue-500">Register here</a>
+                        Don't have an account? <a href="/dashboard" className="text-blue-500">Register here</a>
                     </p>
                 </div>
             </div>
