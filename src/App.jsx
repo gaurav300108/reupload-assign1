@@ -6,8 +6,8 @@ const App = () => {
   return (
     <div className='  bg-gray-100'> <Router >
       <Routes>
-        <Route path="${process.env.URL}/dashboard" element={<Dashboard />} />
-        <Route path="${process.env.URL}/signin" element={<SignIn />} />
+        <Route path=`${process.env.URL}/dashboard` element={<Dashboard />} />
+        <Route path=`${process.env.URL}/signin` element={<SignIn />} />
         {/* Redirect to sign in if no route matches */}
         <Route path="*" element={<Navigate to="/signin" />} />
       </Routes>
