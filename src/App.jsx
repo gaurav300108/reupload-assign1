@@ -1,29 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import SignIn from './pages/SignIn';
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-
-  const handleSignIn = () => {
-    // Simulate successful sign-in
-    setIsLoggedIn(true);
-  };
-
   return (
     <div className="bg-gray-100">
-      <Router>
-        <Routes>
-          <Route path="*" element={isLoggedIn ? <Dashboard /> : <SignIn onSignIn={handleSignIn} />} />
-        </Routes>
-      </Router>
-
       {/* Navigation buttons */}
       <nav className="flex justify-center mt-4">
         <button
           className="px-4 py-2 bg-blue-500 text-white rounded-md mr-2"
-          onClick={handleSignIn}
+          onClick={() => {
+            // Handle sign-in button click (e.g., navigate to "/signin")
+            window.location.href = '/signin';
+          }}
         >
           Sign In
         </button>
@@ -37,6 +26,15 @@ const App = () => {
           Dashboard
         </button>
       </nav>
+
+      {/* Render the appropriate component based on the button click */}
+      <div className="mt-4">
+        {window.location.pathname === '/signin' ? (
+          <SignIn />
+        ) : (
+          <Dashboard />
+        )}
+      </div>
     </div>
   );
 };
