@@ -7,7 +7,7 @@ import TopProducts from '../components/TopProducts';
 import Schedule from '../components/Schedule';
 
 const Dashboard = () => (
-    <div className="flex bg-gray-100 px-5 py-10 rounded-[1rem]  min-h-screen">
+    <div className="flex bg-gray-100 px-5 py-10 rounded-[1rem]">
         <Sidebar />
         <div className="flex-1 overflow-hidden">
             <DashboardHeader />
