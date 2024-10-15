@@ -13,7 +13,7 @@ const App = () => {
           <Route path="/signin" element={<SignIn />} />
           
           {/* Redirect any undefined routes to dashboard */}
-          <Route path="*" element={<Navigate to="/dashboard" />} />
+          <Route path="*" element={<Navigate to="/signin" />} />
         </Routes>
       </Router>
     </div>
